@@ -63,8 +63,8 @@ PNG
 
 ---
 # Snapshots of the web pages
-<img src="./img/pic1">
-<img src="./img/pic2">
-<img src="./img/pic3">
-<img src="./img/pic4">
-<img src="./img/pic5">
+<img src="./img/pic1.png">
+<img src="./img/pic2.png">
+<img src="./img/pic3.png">
+<img src="./img/pic4.png">
+<img src="./img/pic5.png">
