@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Search</title>
+    <script src="https://kit.fontawesome.com/7ac9749b66.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="SearchPage.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <!-- <link rel="stylesheet" href="DetailPageAll.css"> -->
+    <link rel="stylesheet" href="Nav.css">
+</head>
+
+<body>
+    <!-- Navigation bar -->
+
+    <nav>
+        <img src="MultiClothesLogo.png"> <!-- LOGO image -->
+        <a href="/"><i class="fa-sharp fa-solid fa-house"></i> Home Page</a>
+        <a href="/search"><i class="fa-solid fa-magnifying-glass"></i> Search</a>
+        <a href="/about-us"><i class="fa-sharp fa-solid fa-circle-info"></i> About US</a>
+        <a href="/admin-login"><i class="fa-sharp fa-solid fa-circle-user"></i> Administrator</a>
+    </nav>
+
+    <h1 class="cen">Search</h1>
+
+
+    <!-- <div class="choice">
+        <input type="checkbox" onclick="CheckedSearch1()" name="SearchBy" value="Name" id="chkName" checked>
+        <c>Name</c>
+
+        <input type="checkbox" onclick="CheckedSearch2()" name="SearchBy" value="ID" id="chkID" checked>
+        <c>ID</c>
+
+        <input type="checkbox" onclick="CheckedSearch3()" name="SearchBy" value="Brand" id="chkBrand" checked>
+        <c>Brand</c>
+    </div> -->
+
+    <!-- Search Box for 3 criteria -->
+    <div class="box">
+        <div class="search">
+            <input type="text" id="Name" placeholder="Enter Name...">
+        </div>
+
+        <div class="search">
+            <input type="text" id="Id" placeholder="Enter Id...">
+        </div>
+
+        <div class="search">
+            <input type="text" id="Brand" placeholder="Enter Brand...">
+        </div>
+
+        <!-- Submit botton -->
+        <button type="submit" id="Submit" onclick="callWS()">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
+    <br>
+    <div id="output"></div>
+
+    <footer>
+        <!--Row-->
+        <div class="containerFooter">
+            <!--Column 1-->
+            <div class="boxFooter">
+                <div class="mailList">
+                    <!-- https://uiverse.io/guilhermeyohan/fresh-newt-22 -->
+                    <p>Subscribe to our mail list</p>
+                    <input type="email" name="email" class="mailList-input" placeholder="Your email address">
+                    <br>
+                    <div class="submit-btn">SUBMIT</div>
+                </div>
+            </div>
+            <!--Column 2-->
+            <div class="boxFooter">
+                <div class="help">
+                    <ul>Help and Information</ul>
+                    <li>Help</li>
+                    <li>Track Order</li>
+                    <li>Size Guide</li>
+                    <li>Returns & Exchanges</li>
+                    <li>Payment & Security</li>
+                    <li>Send us Feedback</li>
+                </div>
+            </div>
+            <!--Column 3-->
+            <div class="boxFooter">
+                <div class="contactUs">
+                    <h5>Contact Us</h5>
+                    <a href="https://www.facebook.com/"><img id="fb"
+                            src="https://cdn-icons-png.flaticon.com/512/1077/1077041.png" style="width: 30px;"></a>
+                    <a href="https://www.instagram.com/"><img id="ig"
+                            src="https://cdn-icons-png.flaticon.com/512/87/87390.png" style="width: 30px;"></a>
+                    <a href="https://www.twitter.com/"><img id="twt"
+                            src="https://cdn-icons-png.flaticon.com/512/60/60580.png" style="width: 30px;"></a>
+                    <a href="https://www.tiktok.com/"><img id="tiktok"
+                            src="https://cdn-icons-png.flaticon.com/512/3938/3938074.png" style="width: 30px;"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<!-- <script type="application/javascript">
+    /* ==========  javascript  ========== */
+
+    let SearchName = document.getElementById("Name");
+    let SearchType = document.getElementById("Id");
+    let SearchBrand = document.getElementById("Brand");
+
+    function CheckedSearch1() {
+        let seletedEle = document.getElementById("chkName");
+        if (seletedEle.checked === true) {
+            SearchName.style.display = "block";
+        } else {
+            SearchName.style.display = "none";
+        }
+    }
+
+    function CheckedSearch2() {
+        let seletedEle = document.getElementById("chkId");
+        if (seletedEle.checked === true) {
+            SearchType.style.display = "block";
+        } else {
+            SearchType.style.display = "none";
+        }
+    }
+
+    function CheckedSearch3() {
+        let seletedEle = document.getElementById("chkBrand");
+        if (seletedEle.checked === true) {
+            SearchBrand.style.display = "block";
+        } else {
+            SearchBrand.style.display = "none";
+        }
+    }
+
+</script> -->
+<script src="client.js"></script>
+<style>
+    .list {
+        text-align: center;
+    }
+    /* Container of product boxes */
+    .container {
+        padding: 20px;
+        margin: 8px;
+        display: flex;
+        flex-wrap: wrap;
+        /*wrap into multiple lines*/
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+
+    /* Product box */
+    .column {
+        font-size: medium;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        width: 50%;
+        margin: auto;
+        margin-top: 10px;
+        text-align: center;
+        border-radius: 20px;
+        padding: 20px;
+        align-items: stretch;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-bottom: 40px;
+    }
+
+    @media screen and (min-width: 768px) {
+        nav {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        /* Container of product boxes */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            /*wrap into multiple lines*/
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: stretch;
+        }
+
+        /* Product box */
+        .column {
+            width: 30%;
+            max-height: 760px;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: stretch;
+            margin: 2px 2px;
+        }
+    }
+</style>

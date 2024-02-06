@@ -1,0 +1,223 @@
+/* Home Page for Admin css */
+/* Set all front to Montserrat */
+* {
+    font-family: 'Montserrat';
+}
+
+body{
+    padding: 0;
+    margin: 0px;
+}
+
+/* center page */
+.center{
+    width: 500px;
+    margin: 0;
+    padding: 0;
+    margin-top: 20%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    color: #705228;
+    text-align: center;
+    
+}
+
+.center a { /* https://uiverse.io/barisdogansutcu/fuzzy-bullfrog-72*/
+    display: flex;
+    flex-direction: column;
+    padding: 17px 40px;
+    border-radius: 50px;
+    border: 0;
+    background-color: white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);/*rgb(0 0 0 / 5%) 0 0 8px;*/
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: #705228;
+    text-decoration: none;
+    margin-top: 10px;
+    
+}
+/* When the mouse cursor on the Product and User management buttons, shows the background and shadow and change letter-spacing to 3px*/
+.center a:hover {
+    letter-spacing: 3px;
+    background-color: #f3e2ba;
+    color: #705228;
+    box-shadow: #d4bd88 0px 7px 29px 0px;
+}
+
+/* When the mouse click on the Product and User management buttons, shows the background and shadow and change letter-spacing to 3px and change transition-y: 10px */
+.center a:active {
+    letter-spacing: 3px;
+    background-color: #f3e2ba;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #d4bd88 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+    
+}
+
+footer {
+    background-color: #f3e2ba;
+    height: auto;
+    padding: 10px;
+    margin-bottom: 0px;
+    margin-top: 20%;
+}
+
+/* Container of elements in the footer */
+.containerFooter {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px
+}
+
+/* Each box of elements in footer */
+.boxFooter {
+    width: fit-content;
+    height: auto;
+    padding: 10px;
+    overflow: hidden;
+}
+
+/* Mail list box */
+.boxFooter .mailList {
+    order: 1;
+    display: block;
+    /* position: absolute; */
+    height: 140px;
+    width: 240px;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 6px;
+    color: #000000;
+    box-shadow: 0px 0px 60px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Mail list box header */
+.boxFooter .mailList p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    line-height: 25px;
+    padding-bottom: 8px;
+}
+
+/* Input box of mail list box */
+.boxFooter .mailList input {
+    /* position: absolute; */
+    bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #d4d4d4;
+    padding: 10px;
+    width: 82%;
+    background: transparent;
+    transition: all .25s ease;
+}
+
+/* Input box of mail list box when on focus */
+.boxFooter .mailList input:focus {
+    outline: none;
+    border-bottom: 1px solid #705228;
+}
+
+/* Submit button of mail list box */
+.boxFooter .mailList .submit-btn {
+    /* position: absolute; */
+    border-radius: 30px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #705228;
+    color: #FFF;
+    padding: 12px 20px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    float: right;
+    bottom: -20px;
+    cursor: pointer;
+    transition: all .25s ease;
+    box-shadow: -5px 6px 20px 0px rgba(20, 26, 26, 0.3);
+}
+
+/* Submit button of mail list box on hover */
+.boxFooter .mailList .submit-btn:hover {
+    background-color: #4a3413;
+    box-shadow: -5px 6px 20px 0px rgba(88, 88, 88, 0.569);
+}
+
+/* Help and Information box in footer */
+.boxFooter.help {
+    display: block;
+    order: 2;
+    flex-direction: column;
+}
+
+/* List in the Help and Information box in footer */
+.help li {
+    text-decoration: none;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+/* List in the Help and Information box in footer when hover*/
+.help li:hover {
+    color: #705228;
+    text-decoration-line: underline;
+
+}
+
+/* Contact Us box in footer */
+.boxFooter.contactUs {
+    display: block;
+    flex-direction: row;
+    order: 3;
+}
+
+/* Header of Contact Us box in footer */
+.contactUs h5 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Social media icon under Contact Us header */
+#ig,
+#fb,
+#twt,
+#tiktok {
+    right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    footer{
+        margin-top: 20%;
+    }
+
+    .NextPage{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .containerFooter {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    /* Boxes of elements in footer */
+    .boxFooter {
+        height: auto;
+        padding: 10px;
+        margin: 0%;
+    }
+}

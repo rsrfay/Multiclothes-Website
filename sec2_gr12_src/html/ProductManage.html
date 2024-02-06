@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Product Management </title>
+    <link rel="stylesheet" href="ProductManage.css">
+    <script src="https://kit.fontawesome.com/372601d9e2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="Nav.css">
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <img src="MultiClothesLogo.png"> <!-- LOGO image -->
+        <a href="/"><i class="fa-sharp fa-solid fa-house"></i> Home Page</a>
+        <a href="/search"><i class="fa-solid fa-magnifying-glass"></i> Search</a>
+        <a href="/about-us"><i class="fa-sharp fa-solid fa-circle-info"></i> About US</a>
+        <a href="/admin-login"><i class="fa-sharp fa-solid fa-circle-user"></i> Administrator</a>
+    </nav>
+    <header>
+        <!-- Return to previous page -->
+        <a class=back href="/product-lists"><i class="fa-solid fa-arrow-left"></i> Back to previous</a>
+        <h1>Product Management</h1>
+    </header>
+    <article>
+        <!-- form for input information of product to insert -->
+        <form id="productForm" onsubmit="insertHandler()">
+            <label for="productId">Product Id*</label>
+            <br>
+            <input type="text" id="productId" required>
+            <br>
+            <label for="productName">Product Name*</label>
+            <br>
+            <input type="text" id="productName" required>
+            <br>
+            <label for="productBrand">Product Brand*</label>
+            <br>
+            <input type="text" id="productBrand" required>
+            <br>
+            <lable for="productDescription">Product Description</lable>
+            <br>
+            <textarea rows="5" cols="50" id="productDescription"></textarea>
+            <br>
+            <lable for="productType">Product Type: *</lable>
+            <br>
+            <!-- radio for selecting type of product -->
+            <input type="radio" name="productType" value="Cloth" id="productType"> Clothing
+            <input type="radio" name="productType" value="Footwear" id="productType"> Footwear
+            <br><br>
+            <!-- Choices for types of cloth's size -->
+            <!-- style="display:none" -->
+            <div id="productSizesForm">
+                <lable for="productSizes">Avaliable Sizes:</lable>
+                <br>
+                <input type="checkbox" name="productSizes" id="productSizes" value="XXS"> XXS
+                <input type="checkbox" name="productSizes" id="productSizes" value="XS"> XS
+                <input type="checkbox" name="productSizes" id="productSizes" value="s"> S
+                <input type="checkbox" name="productSizes" id="productSizes" value="M"> M
+                <input type="checkbox" name="productSizes" id="productSizes" value="L"> L
+                <input type="checkbox" name="productSizes" id="productSizes" value="XL"> XL
+                <input type="checkbox" name="productSizes" id="productSizes" value="XXL"> XXL
+                <input type="checkbox" name="productSizes" id="productSizes" value="Free Size"> Free Size
+                <br>
+                <input type="checkbox" name="productSizes" id="productSizes" value="35"> 35 EU
+                <input type="checkbox" name="productSizes" id="productSizes" value="36"> 36 EU
+                <input type="checkbox" name="productSizes" id="productSizes" value="37"> 37 EU
+                <input type="checkbox" name="productSizes" id="productSizes" value="38"> 38 EU
+                <input type="checkbox" name="productSizes" id="productSizes" value="39"> 39 EU
+                <input type="checkbox" name="productSizes" id="productSizes" value="40"> 40 EU
+                <input type="checkbox" name="productSizes" id="productSizes" value="41"> 41 EU
+                <input type="checkbox" name="productSizes" id="productSizes" value="42"> 42 EU
+                <br><br>
+            </div>
+            <label for="productColor">Product Color*</label>
+            <br>
+            <input type="text" id="productColor" required>
+            <br>
+            <label for="productPrice">Product Price*</label>
+            <br>
+            <input type="text" id="productPrice" required>
+            <br>
+            <label for="productQuantity">Product Quantity*</label>
+            <br>
+            <input type="number" id="productQuantity" required>
+            <br>
+            </div>
+            <br>
+            <!-- Input file for image upload
+            <div>
+                Product Image:
+                <input type="file" name="imageupload" accept="image/*" />
+            </div> -->
+
+            <br>
+            <!-- submit button and reset button -->
+            <input type="submit" value="submit" class="submit" id="insert" />
+            <input type="reset" name="reset" value="reset" class="reset" />
+
+            <!-- <script type="application/javascript"> //https://www.w3schools.com/howto/howto_js_display_checkbox_text.asp
+                function myFunction() {
+                    // checkboxes
+                    let clothingCheck = document.getElementById("clothingCheck");
+                    let footwearCheck = document.getElementById("footwearCheck");
+                    let reset = document.getElementsByClassName("reset");
+                    // sizes
+                    let productSizesCloth = document.getElementById("productSizesCloth");
+                    let productSizesFoot = document.getElementById("productSizesFoot");
+                    // If the checkbox is checked, display the output text
+                    if (clothingCheck.checked == true) {
+                        productSizesCloth.style.display = "block";
+                    }
+                    if (footwearCheck.checked == true) {
+                        productSizesFoot.style.display = "block";
+                        productSizesCloth.style.display = "none";
+                    }
+                    else if (footwearCheck.checked == false){
+                        productSizesFoot.style.display = "none";
+                    }
+                }
+            </script> -->
+        </form>
+    </article>
+
+    <footer>
+        <!--Row-->
+        <div class="containerFooter">
+            <!--Column 1-->
+            <div class="boxFooter">
+                <div class="mailList">
+                    <!-- https://uiverse.io/guilhermeyohan/fresh-newt-22 -->
+                    <p>Subscribe to our mail list</p>
+                    <input type="email" name="email" class="mailList-input" placeholder="Your email address">
+                    <br>
+                    <div class="submit-btn">SUBMIT</div>
+                </div>
+            </div>
+            <!--Column 2-->
+            <div class="boxFooter">
+                <div class="help">
+                    <ul>Help and Information</ul>
+                    <li>Help</li>
+                    <li>Track Order</li>
+                    <li>Size Guide</li>
+                    <li>Returns & Exchanges</li>
+                    <li>Payment & Security</li>
+                    <li>Send us Feedback</li>
+                </div>
+            </div>
+            <!--Column 3-->
+            <div class="boxFooter">
+                <div class="contactUs">
+                    <h5>Contact Us</h5>
+                    <a href="https://www.facebook.com/"><img id="fb"
+                            src="https://cdn-icons-png.flaticon.com/512/1077/1077041.png" style="width: 30px;"></a>
+                    <a href="https://www.instagram.com/"><img id="ig"
+                            src="https://cdn-icons-png.flaticon.com/512/87/87390.png" style="width: 30px;"></a>
+                    <a href="https://www.twitter.com/"><img id="twt"
+                            src="https://cdn-icons-png.flaticon.com/512/60/60580.png" style="width: 30px;"></a>
+                    <a href="https://www.tiktok.com/"><img id="tiktok"
+                            src="https://cdn-icons-png.flaticon.com/512/3938/3938074.png" style="width: 30px;"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+<script src="clientPd.js"></script>

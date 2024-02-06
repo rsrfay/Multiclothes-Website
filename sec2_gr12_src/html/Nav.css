@@ -1,0 +1,57 @@
+/* Decorate Navigation bar */
+nav {
+    background-color: #f3e2ba;
+    margin: 0px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Set up Logo image */
+nav img {
+    width: 250px;
+    height: fit-content;
+    margin: auto;
+
+}
+
+nav a {
+    display: block;
+    float: left;
+    color: #705228;
+    padding: 10px 16px;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+/* When the mouse cursor on the nevigation, shows the white background and shadow */
+nav a:hover {
+    height: fit-content;
+    padding: 10px;
+    border: unset;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: #70522889 0px 7px 29px 0px;
+    letter-spacing: 3px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+@media screen and (min-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    nav a {
+        height: fit-content;
+        padding: 50px 16px;
+    }
+
+    nav img {
+        margin: 0px;
+        margin-top: 30px;
+    }
+}

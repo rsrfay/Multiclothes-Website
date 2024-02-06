@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> ZARA Heart Print T-Shirt </title>
+    <link rel="stylesheet" href="DetailPageEach.css">
+    <script src="https://kit.fontawesome.com/372601d9e2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Nav.css">
+
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <img src="MultiClothesLogo.png"> <!-- LOGO image -->
+        <a href="/"><i class="fa-sharp fa-solid fa-house"></i> Home Page</a>
+        <a href="/search"><i class="fa-solid fa-magnifying-glass"></i> Search</a>
+        <a href="/about-us"><i class="fa-sharp fa-solid fa-circle-info"></i> About US</a>
+        <a href="/admin-login"><i class="fa-sharp fa-solid fa-circle-user"></i> Administrator</a>
+    </nav>
+    <header>
+        <!--Button for returning to results page-->
+        <a class="back" href="/product-all"><i class="fa-solid fa-arrow-left"></i> Back to results</a>
+    </header>
+    <!--All information of the product-->
+    <section class="info">
+        <!--Image slides and button-->
+        <article class="im">
+            <!--Images for image slide-->
+            <div id="images">
+                <img class="slides"
+                    src="https://static.zara.net/photos///2023/V/0/2/p/0495/428/609/2/w/850/0495428609_2_1_1.jpg?ts=1674811177337">
+                <img class="slides"
+                    src="https://static.zara.net/photos///2023/V/0/2/p/0495/428/609/2/w/850/0495428609_2_2_1.jpg?ts=1674811176099">
+                <img class="slides"
+                    src="https://static.zara.net/photos///2023/V/0/2/p/0495/428/609/2/w/850/0495428609_2_4_1.jpg?ts=1674811229638">
+            </div>
+            <!--Left and right buttons-->
+            <div id="button">
+                <button class="button_left" onclick="plusDivs(-1)"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="button_right" onclick="plusDivs(+1)"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <!--Javascript for left and right buttons-->
+            <script type="application/javascript"> // https://www.w3schools.com/w3css/w3css_slideshow.asp
+                var slideIndex = 1; // set the slideIndex to 1 as default
+                showDivs(slideIndex); // display the first image (that was set as 1)
+
+                function plusDivs(n) { //this function will subtract 1 or add 1 to the slideIndex
+                    showDivs(slideIndex += n);
+                }
+
+                function showDivs(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("slides");
+                    if (n > slides.length) {  //if slideIndex > total number of slide (in this case is 3) then set it back to the first slide
+                        slideIndex = 1;
+                    }
+                    if (n < 1) { // if slideIndex < 1 (zero) then set to total number of slides (this case is 3)
+                        slideIndex = slides.length;
+                    }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none"; //hide all slides to show only the one with the same slideIndex
+                    }
+                    slides[slideIndex - 1].style.display = "block"; //show the slide with the given slideIndex 
+                }
+            </script>
+        </article>
+        <!--Product Description-->
+        <article class="description">
+            <!--Product Name-->
+            <h1> ZARA Heart Print T-Shirt </h1>
+            <!--Product Information-->
+            <p> T-shirt with a round neckline and short sleeves. Contrast prints on the front and back.</p>
+            <p> Product ID: AB1111567890</p>
+            <p>Composition</p>
+            <ul class="compositions">
+                <li>Cotton 100%</li>
+            </ul>
+            <!--Product Price-->
+            <p class="price">$29.99</p>
+            <!--Dropdown button for size selection-->
+            <div class="sizes">
+                <lable for="productSizes">Avaliable Sizes:</lable>
+                <select name="listSizes">
+                    <option value="select" selected> Please select size </option>
+                    <option value="xxs"> XXS </option>
+                    <option value="xs"> XS </option>
+                    <option value="s"> S </option>
+                    <option value="m"> M </option>
+                    <option value="l"> L </option>
+                    <option value="xl"> XL </option>
+                    <option value="xxl"> XXL </option>
+                </select>
+            </div>
+            <!--Dropdown button for color selection-->
+            <div class="colors">
+                <lable for="productColor">Avaliable Colors:</lable>
+                <select name="listColors">
+                    <option value="select" selected> Please select color </option>
+                    <option value="Crimson"> Crimson </option>
+                </select>
+            </div>
+            <!--Add to cart button and like button-->
+            <div class="cartHeart">
+                <button class="cart">Add to Cart <i class="fa-solid fa-cart-plus"></i></button>
+                <button class="heart"><i class="fa-regular fa-heart"></i></button>
+            </div>
+        </article>
+    </section>
+    <h1 id="reviewsHead"> Customer Reviews</h1>
+    <!--Container for all user reviews-->
+    <article class="reviews">
+        <!--User review 1-->
+        <article class="box">
+            <!--Profile-->
+            <div class="profile">
+                <!--Profile Icon-->
+                <div class="profileImg">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <!--Name and Username-->
+                <div class="profileInfo">
+                    <strong id="name">Cecil Connolly</strong>
+                    <span id="username">@Cecil_Connolly</span>
+                </div>
+            </div>
+            <!--Stars review-->
+            <div class="starReviews">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <!--User comments-->
+            <div class="comments">
+                <p> This t-shirt is the definition of comfort. The fabric is so soft and cozy, and the fit is relaxed
+                    without looking sloppy.</p>
+            </div>
+        </article>
+        <!--User review 2-->
+        <article class="box">
+            <!--Profile-->
+            <div class="profile">
+                <!--Profile Icon-->
+                <div class="profileImg">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <!--Name and Username-->
+                <div class="profileInfo">
+                    <strong id="name">Jeremy West</strong>
+                    <span id="username">@Jeremy_West</span>
+                </div>
+            </div>
+            <!--Stars review-->
+            <div class="starReviews">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <!--User comments-->
+            <div class="comments">
+                <p> This t-shirt is a game-changer! It's incredibly soft and comfortable, and the material is top-notch.
+                    I love the simple design and the fit is perfect - not too loose and not too tight. </p>
+            </div>
+        </article>
+    </article>
+    <!--Footer-->
+    <footer>
+        <!--Row-->
+        <div class="containerFooter">
+            <!--Column 1-->
+            <div class="boxFooter">
+                <div class="mailList">
+                    <!-- https://uiverse.io/guilhermeyohan/fresh-newt-22 -->
+                    <p>Subscribe to our mail list</p>
+                    <input type="email" name="email" class="mailList-input" placeholder="Your email address">
+                    <br>
+                    <div class="submit-btn">SUBMIT</div>
+                </div>
+            </div>
+            <!--Column 2-->
+            <div class="boxFooter">
+                <div class="help">
+                    <ul>Help and Information</ul>
+                    <li>Help</li>
+                    <li>Track Order</li>
+                    <li>Size Guide</li>
+                    <li>Returns & Exchanges</li>
+                    <li>Payment & Security</li>
+                    <li>Send us Feedback</li>
+                </div>
+            </div>
+            <!--Column 3-->
+            <div class="boxFooter">
+                <div class="contactUs">
+                    <h5>Contact Us</h5>
+                    <a href="https://www.facebook.com/"><img id="fb"
+                            src="https://cdn-icons-png.flaticon.com/512/1077/1077041.png" style="width: 30px;"></a>
+                    <a href="https://www.instagram.com/"><img id="ig"
+                            src="https://cdn-icons-png.flaticon.com/512/87/87390.png" style="width: 30px;"></a>
+                    <a href="https://www.twitter.com/"><img id="twt"
+                            src="https://cdn-icons-png.flaticon.com/512/60/60580.png" style="width: 30px;"></a>
+                    <a href="https://www.tiktok.com/"><img id="tiktok"
+                            src="https://cdn-icons-png.flaticon.com/512/3938/3938074.png" style="width: 30px;"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

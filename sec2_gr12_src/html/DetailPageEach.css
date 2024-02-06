@@ -1,0 +1,444 @@
+/* Detail Page of each product css */
+/* Set font family of every element */
+* {
+    font-family: 'Montserrat';
+}
+
+/* Header */
+header {
+    margin: 30px 0;
+}
+
+/* Back to previous page button */
+.back {
+    display: flexbox;
+    margin-left: 1px;
+    width: auto;
+    text-decoration: none;
+    padding: 15px 20px;
+    border: unset;
+    border-radius: 15px;
+    color: black;
+    position: relative;
+    font-size: 17px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/* Back to previous page button when hover */
+.back:hover {
+    background-color: #f3e2ba;
+}
+
+/* Set margin to 0 in body */
+body {
+    margin: 0;
+
+}
+
+/* Position of image section */
+.im {
+    position: relative;
+}
+
+/* Images slide */
+article img.slides {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 70vh;
+    text-align: center;
+}
+
+/* Each image in the slide */
+div#images {
+    display: flex;
+    position: relative;
+}
+
+/* Product description */
+.description h1,
+p,
+.sizes,
+.colors {
+    padding: 5px;
+    margin-bottom: 0px;
+}
+
+/* Button for images slide */
+.button_left,
+.button_right {
+    border: none;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 8px;
+    margin-top: 10px;
+    color: black;
+    background-color: #f3e2ba;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Right button */
+.button_right {
+    right: 0;
+}
+
+/* Left and Right button when hover */
+.button_left:hover,
+.button_right:hover {
+    background-color: #705228;
+    color: white;
+    opacity: 0.6;
+}
+
+/* Product name */
+.description h1 {
+    font-size: larger;
+    font-weight: bold;
+}
+
+/* Product price */
+.description p.price {
+    text-align: right;
+    font-style: italic;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+/* Selecting size and color mark down*/
+select {
+    margin-left: 5px;
+    padding: 10px 50px;
+    border-color: gray;
+    border-width: 1.5px;
+    border-style: solid;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Selecting size and color mark down when focus */
+select:focus {
+    outline: none;
+}
+
+/* Selecting size and color mark down when hover */
+select:hover {
+    border-color: #f3e2ba;
+}
+
+/* Add to cart button */
+.cart {
+    padding: 15px 120px;
+    border-color: gray;
+    background-color: #f3e2ba;
+    color: black;
+    border-width: 1.5px;
+    border-style: solid;
+    border-radius: 10px;
+    display: block;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* Add to cart button when hover */
+.cart:hover,
+.heart:hover {
+    background-color: #705228;
+    color: white;
+    border-color: white;
+}
+
+/* Heart button */
+.heart {
+    padding: 10px 13px;
+    font-size: 20px;
+    border-color: gray;
+    background-color: #f3e2ba;
+    color: black;
+    border-width: 1.5px;
+    border-style: solid;
+    border-radius: 30px;
+    display: block;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* Add to cart and heart button */
+.cartHeart {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+}
+
+/* Compositions of the product */
+.compositions {
+    list-style-type: circle;
+}
+
+/* Header of Cutomer Reviews section */
+h1#reviewsHead {
+    margin-left: 0px;
+    background-color: #f3e2ba;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Container of review boxes */
+.reviews {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* Each box of customer review in Cutomer reviews section */
+.box {
+    width: 450px;
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.17);
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+/* Container of profile icon of customer */
+.profileImg {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 4px 10px 19px -5px rgba(0, 0, 0, 0.30);
+    overflow: hidden;
+}
+
+/* Profile icon of customer */
+.profileImg i {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    object-fit: contain;
+    float: middle;
+    font-size: 25px;
+    margin-top: 5px;
+}
+
+/* Profile section of sutomer(icon+name) */
+.profile {
+    margin-bottom: 20px;
+}
+
+/* Stars review of customer */
+.starReviews {
+    color: #f9d71c;
+}
+
+/* @ username of customer */
+span#username {
+    color: gray;
+    font-size: smaller;
+}
+
+/* Customer comment */
+div.comments {
+    padding-left: 0px;
+}
+
+/* Footer */
+footer {
+    margin-top: 100px;
+    background-color: #f3e2ba;
+    height: auto;
+    padding: 10px;
+    margin-bottom: 0;
+}
+
+/* Container of elements in the footer */
+.containerFooter {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px
+}
+
+/* Each box of elements in footer */
+.boxFooter {
+    width: fit-content;
+    height: auto;
+    padding: 10px;
+    overflow: hidden;
+}
+
+/* Mail list box */
+.boxFooter .mailList {
+    order: 1;
+    display: block;
+    /* position: absolute; */
+    height: 140px;
+    width: 240px;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 6px;
+    color: #000000;
+    box-shadow: 0px 0px 60px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Mail list box header */
+.boxFooter .mailList p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    line-height: 25px;
+    padding-bottom: 8px;
+}
+
+/* Input box of mail list box */
+.boxFooter .mailList input {
+    /* position: absolute; */
+    bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #d4d4d4;
+    padding: 10px;
+    width: 82%;
+    background: transparent;
+    transition: all .25s ease;
+}
+
+/* Input box of mail list box when on focus */
+.boxFooter .mailList input:focus {
+    outline: none;
+    border-bottom: 1px solid #705228;
+}
+
+/* Submit button of mail list box */
+.boxFooter .mailList .submit-btn {
+    /* position: absolute; */
+    border-radius: 30px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #705228;
+    color: #FFF;
+    padding: 12px 20px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    float: right;
+    bottom: -20px;
+    cursor: pointer;
+    transition: all .25s ease;
+    box-shadow: -5px 6px 20px 0px rgba(20, 26, 26, 0.3);
+}
+
+/* Submit button of mail list box on hover */
+.boxFooter .mailList .submit-btn:hover {
+    background-color: #4a3413;
+    box-shadow: -5px 6px 20px 0px rgba(88, 88, 88, 0.569);
+}
+
+/* Help and Information box in footer */
+.boxFooter.help {
+    display: block;
+    order: 2;
+    flex-direction: column;
+}
+
+/* List in the Help and Information box in footer */
+.help li {
+    text-decoration: none;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+/* List in the Help and Information box in footer when hover*/
+.help li:hover {
+    color: #705228;
+    text-decoration-line: underline;
+
+}
+
+/* Contact Us box in footer */
+.boxFooter.contactUs {
+    display: block;
+    flex-direction: row;
+    order: 3;
+}
+
+/* Header of Contact Us box in footer */
+.contactUs h5 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Social media icon under Contact Us header */
+#ig,
+#fb,
+#twt,
+#tiktok {
+    right: 10px;
+}
+
+/* For desktop screen */
+@media screen and (min-width: 768px) {
+
+    /* Header */
+    header {
+        margin: 20px;
+    }
+    /* Class information of product (image slide+Product description) */
+    .info {
+        margin-left: 50px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    /* Product description */
+    .description {
+        margin-left: 15px;
+    }
+
+    /* Customer reviews container */
+    article.reviews {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: stretch;
+        margin: auto;
+    }
+
+    /* Cart and heart button */
+    .cartHeart {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    /* Container of elements in footer */
+    .containerFooter {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    /* Boxes of elements in footer */
+    .boxFooter {
+        height: auto;
+        padding: 10px;
+        margin: 0%;
+    }
+}

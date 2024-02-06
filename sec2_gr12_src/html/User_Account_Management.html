@@ -1,0 +1,196 @@
+<!-- User Account Management html -->
+<!DOCTYPE html>
+<html lang="en">
+<!--The page provides a form to add a new account
+The page should allow the administrators to modify the existing user accounts
+The page should allow the administrator to delete the specific user account-->
+
+<head>
+    <title>User Account Management</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <script src="https://kit.fontawesome.com/7ac9749b66.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="User_Account_Management.css">
+    <link rel="stylesheet" href="Nav.css">
+
+</head>
+
+<body>
+    <header><!--Document Header-->
+
+    </header>
+    <!-- Navigation bar -->
+    <nav>
+        <img src="MultiClothesLogo.png"> <!-- LOGO image -->
+        <a href="/"><i class="fa-sharp fa-solid fa-house"></i> Home Page</a>
+        <a href="/search"><i class="fa-solid fa-magnifying-glass"></i> Search</a>
+        <a href="/about-us"><i class="fa-sharp fa-solid fa-circle-info"></i> About US</a>
+        <a href="/admin-login"><i class="fa-sharp fa-solid fa-circle-user"></i> Administrator</a>
+    </nav>
+    <!-- Return to welcome page -->
+    <br><a class=back href="/adminhome"><i class="fa-solid fa-arrow-left"></i> Back to previous</a>
+    <h1 class="topic">Add a New Account</h1>
+    <!-- Form for add new account -->
+    <div class="form">
+        <form id="AdminForm">
+            <fieldset>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="username">Username:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="email" id="AdUsername" name="username" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="password">Password:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="password" id="AdPassword" name="password" required><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="first-name">First Name:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="AdFirstname" name="first-name" required>
+                        <br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="last-name">Last Name:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="AdLastname" name="last-name" required>
+                    </div>
+                    <br>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="address">Address:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="AdAddress" name="address" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="birthday">birthday:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="date" id="AdBirthday" name="birthday" min="1900-01-01" max="2023-12-31" required>
+                        <br>
+                    </div>
+                </div>
+                <!--
+                <label for="customer-id">Customer-ID:</label>
+                <input type="number" name="customer-id" required>
+                <br>
+                -->
+                <div class="row">
+                    <div class="col-25">
+                        <label for="email">Email:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="email" id="AdEmail" name="email" required>
+                        <br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="mobile">Mobile Phone:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="tel" id="AdMobile" name="mobile" required><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="Id">ID:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="tel" id="AdId" name="Id" required><br>
+                    </div>
+                </div>
+                <input type="submit" value="Add account" id=SubmitInsert class="submit" onclick="callWS()">
+                <input type="reset" value="Clear" class="reset">
+                </fielset>
+        </form>
+    </div>
+
+
+    <!-- Search Box for 3 criteria -->
+    <div class="box">
+        <div class="search">
+            <input type="text" id="FNameAd" placeholder="Enter FName...">
+        </div>
+
+        <div class="search">
+            <input type="text" id="LNameAd" placeholder="Enter LName...">
+        </div>
+
+        <div class="search">
+            <input type="text" id="IdAd" placeholder="Enter Id...">
+        </div>
+
+        <!-- Submit botton -->
+        <button type="submit" id="SubmitAd">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
+    <br>
+    <!--For insert admin list table from client2.js-->
+    <div id="outputAd"></div>
+    <!--For insert update admin form from client2.js-->
+    <div id="outputEdit"></div>
+    <footer>
+        <!--Row-->
+        <div class="containerFooter">
+            <!--Column 1-->
+            <div class="boxFooter">
+                <div class="mailList">
+                    <!-- https://uiverse.io/guilhermeyohan/fresh-newt-22 -->
+                    <p>Subscribe to our mail list</p>
+                    <input type="email" name="email" class="mailList-input" placeholder="Your email address">
+                    <br>
+                    <div class="submit-btn">SUBMIT</div>
+                </div>
+            </div>
+            <!--Column 2-->
+            <div class="boxFooter">
+                <div class="help">
+                    <ul>Help and Information</ul>
+                    <li>Help</li>
+                    <li>Track Order</li>
+                    <li>Size Guide</li>
+                    <li>Returns & Exchanges</li>
+                    <li>Payment & Security</li>
+                    <li>Send us Feedback</li>
+                </div>
+            </div>
+            <!--Column 3-->
+            <div class="boxFooter">
+                <div class="contactUs">
+                    <h5>Contact Us</h5>
+                    <a href="https://www.facebook.com/"><img id="fb"
+                            src="https://cdn-icons-png.flaticon.com/512/1077/1077041.png" style="width: 30px;"></a>
+                    <a href="https://www.instagram.com/"><img id="ig"
+                            src="https://cdn-icons-png.flaticon.com/512/87/87390.png" style="width: 30px;"></a>
+                    <a href="https://www.twitter.com/"><img id="twt"
+                            src="https://cdn-icons-png.flaticon.com/512/60/60580.png" style="width: 30px;"></a>
+                    <a href="https://www.tiktok.com/"><img id="tiktok"
+                            src="https://cdn-icons-png.flaticon.com/512/3938/3938074.png" style="width: 30px;"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+
+</html>
+<script src="client2.js"></script>

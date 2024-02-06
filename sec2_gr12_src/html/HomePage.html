@@ -1,0 +1,236 @@
+<!-- Home Page html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> MultiClothes Homepage </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="/HomePage.css">
+    <link rel="stylesheet" href="/Nav.css">
+    <script src="https://kit.fontawesome.com/7ac9749b66.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <!-- Navigation bar -->
+    <nav>
+        <img src="MultiClothesLogo.png"> <!-- LOGO image -->
+        <a href="/"><i class="fa-sharp fa-solid fa-house"></i> Home Page</a>
+        <a href="/search"><i class="fa-solid fa-magnifying-glass"></i> Search</a>
+        <a href="/about-us"><i class="fa-sharp fa-solid fa-circle-info"></i> About US</a>
+        <a href="/admin-login"><i class="fa-sharp fa-solid fa-circle-user"></i> Administrator</a>
+    </nav>
+    <!-- main background image -->
+    <article class="main-background">
+        <div class="discountBox">
+            <div class="discountBoxText">
+                <h1>Special offer</h1>
+                <p>Membership Free Shipping + 10% Off</p>
+                <button class="member"> Shop Now </button>
+            </div>
+        </div>
+    </article>
+
+    <!-- Partners -->
+    <article class="gallery">
+        <h1>Our Partners</h1>
+        <!-- Brands Logo -->
+        <div class="boxPartner">
+            <img src="https://logos-world.net/wp-content/uploads/2020/05/Zara-Logo.png">
+            <img src="https://1000logos.net/wp-content/uploads/2017/02/HM-Logo.png">
+            <img src="https://logos-world.net/wp-content/uploads/2020/10/Fila-Logo.jpg">
+            <img
+                src="https://res.cloudinary.com/zenbusiness/image/upload/v1670445040/logaster/logaster-2020-03-the-4th-logo-1024x862.jpg">
+            <img src="https://download.logo.wine/logo/Pull%26Bear/Pull%26Bear-Logo.wine.png">
+        </div>
+    </article>
+
+    <!-- New in Highlights -->
+    <article class="NewIn">
+        <h1>New In Highlights</h1>
+        <div class="containerNew">
+            <!-- New in 1 -->
+            <div class="boxNew">
+                <img
+                    src="https://static.zara.net/photos///2023/V/0/1/p/2298/008/712/2/w/750/2298008712_2_4_1.jpg?ts=1677056697118">
+                <h3>ZARA </h3>
+                <p>RUSTIC RIBBED T-SHIRT</p>
+            </div>
+            <div class="boxNew">
+                <img
+                    src="https://static.pullandbear.net/2/photos//2023/V/0/2/p/4710/527/707/02/4710527707_2_3_8.jpg?t=1676884962922&imwidth=750">
+                <h3>PULL AND BEAR </h3>
+                <p>WORKER JACKET WITH CORDUROY COLLAR</p>
+            </div>
+            <div class="boxNew">
+                <img
+                    src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fbf%2Fe7%2Fbfe7af42ee5e3b70a011f4ff5754385f09ca8463.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]">
+                <h3>H&M </h3>
+                <p>KNOT-DETAIL SKIRT</p>
+                <br>
+                <br>
+            </div>
+        </div>
+    </article>
+    <!-- API  -->
+    <h2 class="txtcenter"> API TO CONVERT USD TO THB REAL TIME </h2>
+    <!-- action = "https://api.aftership.com/v4" method = "GET"-->
+    <form id="convert-form">
+        <fieldset class="convertBox">
+            <label class="items"> Amount to convert from USD to THB: </label>
+            <input type="number" id="amount-input" required class="items">
+            <button type="submit" class="items" id="convert-btn">Convert</button>
+        </fieldset>
+    </form>
+    <div id="search-results"></div>
+    <footer>
+        <!--Row-->
+        <div class="containerFooter">
+            <!--Column 1-->
+            <div class="boxFooter">
+                <div class="mailList">
+                    <!-- https://uiverse.io/guilhermeyohan/fresh-newt-22 -->
+                    <p>Subscribe to our mail list</p>
+                    <input type="email" name="email" class="mailList-input" placeholder="Your email address">
+                    <br>
+                    <div class="submit-btn">SUBMIT</div>
+                </div>
+            </div>
+            <!--Column 2-->
+            <div class="boxFooter">
+                <div class="help">
+                    <ul>Help and Information</ul>
+                    <li>Help</li>
+                    <li>Track Order</li>
+                    <li>Size Guide</li>
+                    <li>Returns & Exchanges</li>
+                    <li>Payment & Security</li>
+                    <li>Send us Feedback</li>
+                </div>
+            </div>
+            <!--Column 3-->
+            <div class="boxFooter">
+                <div class="contactUs">
+                    <h5>Contact Us</h5>
+                    <a href="https://www.facebook.com/"><img id="fb"
+                            src="https://cdn-icons-png.flaticon.com/512/1077/1077041.png" style="width: 30px;"></a>
+                    <a href="https://www.instagram.com/"><img id="ig"
+                            src="https://cdn-icons-png.flaticon.com/512/87/87390.png" style="width: 30px;"></a>
+                    <a href="https://www.twitter.com/"><img id="twt"
+                            src="https://cdn-icons-png.flaticon.com/512/60/60580.png" style="width: 30px;"></a>
+                    <a href="https://www.tiktok.com/"><img id="tiktok"
+                            src="https://cdn-icons-png.flaticon.com/512/3938/3938074.png" style="width: 30px;"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+<script>
+    // set endpoint and your access key
+    const endpoint = 'convert'
+    const access_key = 'ti3FllknYhicQb25iSRJrTVkEAXib9Gy'; // API key
+
+    // define from currency, to currency, and amount
+    const from = 'USD';
+    const to = 'THB';
+    const amount = document.getElementById('amount-input');
+    const convertButton = document.getElementById('convert-btn');
+    convertButton.addEventListener('click', async (event) => {
+        event.preventDefault();
+        var myHeaders = new Headers();
+        myHeaders.append("apikey", "ti3FllknYhicQb25iSRJrTVkEAXib9Gy");
+        const query = amount.value;
+
+        var requestOptions = {
+            method: 'GET',
+            redirect: 'follow',
+            headers: myHeaders
+        };
+
+        await fetch(`https://api.apilayer.com/currency_data/convert?to=${to}&from=${from}&amount=${query}`, requestOptions)
+            .then(response => response.text())
+            .then(result => alert(result))
+            .catch(error => console.log('error', error));
+    });
+</script>
+<style>
+    * {
+        font-family: 'Montserrat';
+    }
+
+    /* search box (form) */
+    .txtcenter {
+        /* header "SEARCH" */
+        text-align: center;
+    }
+
+    .convertBox {
+        border-radius: 20px;
+        padding: 30px;
+        margin: auto 70px;
+        border: 1px solid;
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        border-color: #705228;
+    }
+
+    .items {
+        margin: 5px;
+        font-size: medium;
+    }
+
+    /* search-results */
+    #search-results {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Shop Now button */
+    #convert-btn {
+        margin-top: 8px;
+        width: auto;
+        text-decoration: none;
+        padding: 15px 25px;
+        border: unset;
+        border-radius: 15px;
+        color: #705228;
+        background: #e8e8e8;
+        position: relative;
+        font-size: 17px;
+        box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+        cursor: pointer;
+        transition: .2;
+    }
+
+    /* Shop Now button hover */
+    #convert-btn:hover {
+        background-color: #705228;
+        color: white;
+    }
+
+    .result {
+        margin: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        width: 250px;
+        text-align: center;
+    }
+
+    .result img {
+        margin-bottom: 10px;
+    }
+
+    .result a {
+        /* title of each menu */
+        color: #333;
+        text-decoration: none;
+    }
+</style>

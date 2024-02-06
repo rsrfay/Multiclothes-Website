@@ -1,0 +1,112 @@
+/* Admin Login Page css */
+* {
+	/* Applied all of the page with the font name is 'Montserrat' */
+	font-family: 'Montserrat';
+}
+body{
+	margin: 0px;
+	background: #705228;
+}
+/* set the background color to our main theme, use flex to make our contianer more flexible to extend or shrink the page size horizontally */
+/* body {
+	
+	background: #705228;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	
+} */
+
+h1 {
+	/* Set the distance between Email and Password box */
+	font-weight: bold;
+	margin: 0;
+}
+
+button {
+	/* Decorate the log in button */
+	/* https://uiverse.io/barisdogansutcu/fuzzy-bullfrog-72*/
+	padding: 17px 40px;
+	border-radius: 50px;
+	border: 0;
+	background-color: #f3e2ba;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+	/*rgb(0 0 0 / 5%) 0 0 8px;*/
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	font-size: 15px;
+	transition: all .5s ease;
+}
+
+button:hover {
+	/* When put the mouse on the button, the button will glow */
+	letter-spacing: 3px;
+	background-color: #f3e2ba;
+	color: #705228;
+	box-shadow: #d4bd88 0px 7px 29px 0px;
+}
+
+button:active {
+	/* When click on the button, the button will glow */
+	letter-spacing: 3px;
+	background-color: #f3e2ba;
+	color: hsl(0, 0%, 100%);
+	box-shadow: #d4bd88 0px 0px 0px 0px;
+	transform: translateY(10px);
+	transition: 100ms;
+}
+
+
+form {
+	/*set the Admin, email box, password box, and Log in button to the center of the container*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+}
+
+input {
+	/*separate and style the input box(Email and Password box) */
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+}
+
+.container {
+	/* Adjust the size of the admin box(overall box = container) and add the shadow behind the box */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+	width: 768px;
+	max-width: 100%;
+	min-height: 480px;
+	margin: auto;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.form-container {
+	/* Align admin form to the center of the page */
+	
+	top: 0;
+	height: 100%;
+	margin: auto;
+}
+
+.log-in-container {
+	/* Adjust size of email and password box*/
+	background-color: #FFFFFF;
+	width: 50%;
+	margin: auto;
+}

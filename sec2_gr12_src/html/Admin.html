@@ -1,0 +1,43 @@
+<!-- Admin Login Page html -->
+<!DOCTYPE html>
+<html>
+<head>   
+    <!-- link of font source that we use in our Administration, and the css link of our Administration(Log in form) -->
+    <link rel="stylesheet" href="Admin.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="Nav.css">
+    <script src="https://kit.fontawesome.com/372601d9e2.js" crossorigin="anonymous"></script>
+    <title>Administration</title>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <img src="MultiClothesLogo.png"> <!-- LOGO image -->
+        <a href="/"><i class="fa-sharp fa-solid fa-house"></i> Home Page</a>
+        <a href="/search"><i class="fa-solid fa-magnifying-glass"></i> Search</a>
+        <a href="/about-us"><i class="fa-sharp fa-solid fa-circle-info"></i> About US</a>
+        <a href="/admin-login"><i class="fa-sharp fa-solid fa-circle-user"></i> Administrator</a>
+    </nav>
+    <!-- define class name, and id as container  -->
+    <article class="container" id="container">
+        <div class="form-container log-in-container">
+            <form action="/form-submit" method="POST" onsubmit="loginHandler()" id="Login-form">
+                <!-- define header name as Admin -->
+                <h1>Admin</h1>
+                <!-- create box to input email and password -->
+                <input id="email" name="email" type="email" placeholder="Email" />
+                <input id="password" name="password" type="password" placeholder="Password" />
+                <!-- link to the admin's welcome page after press the LOG IN button -->
+                <!-- create LOG IN button -->
+                <!-- <a href="WelcomePageAdmin.html"> -->
+                    <!-- <button type="submit" id="Login" onclick="loginHandler()">Log in</button> -->
+                    <button type="submit" id="Login">Log in</button>
+                <!-- </a> -->
+            </form>
+        </div>
+    </article>
+</body>
+
+</html>
+<script src="client3.js"></script>
